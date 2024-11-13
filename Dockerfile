@@ -23,12 +23,12 @@ WORKDIR /app
 USER oim
 RUN mkdir /app/nginx/
 RUN mkdir /app/nginx/conf/
-RUN mkdir /app/nginx/site-enabled/
+RUN mkdir /app/nginx/sites-enabled/
 COPY nginx.conf /app/nginx/conf
 
 # Install the project (ensure that frontend projects have been built prior to this step).
 FROM python_libs_docker
-COPY sites.conf /app/nginx/site-enabled/
+COPY sites.conf /app/nginx/sites-enabled/
 
 EXPOSE 80
 HEALTHCHECK --interval=5s --timeout=2s CMD ["wget", "-q", "-O", "-", "http://localhost:80/"]

@@ -1,8 +1,5 @@
 #!/bin/bash
   
-# Start the first process
-env > /etc/.cronenv
-
 # service cron start &
 # status=$?
 # if [ $status -ne 0 ]; then

@@ -24,6 +24,7 @@ USER oim
 RUN mkdir /app/nginx/
 RUN mkdir /app/nginx/conf/
 RUN mkdir /app/nginx/sites-enabled/
+RUN mkdir /app/nginx_run
 COPY nginx.conf /app/nginx/conf/
 
 # Install the project (ensure that frontend projects have been built prior to this step).

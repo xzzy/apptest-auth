@@ -24,7 +24,7 @@ USER oim
 RUN mkdir /app/nginx/
 RUN mkdir /app/nginx/conf/
 RUN mkdir /app/nginx/sites-enabled/
-COPY nginx.conf /app/nginx/conf
+COPY nginx.conf /app/nginx/conf/
 
 # Install the project (ensure that frontend projects have been built prior to this step).
 FROM python_libs_docker
